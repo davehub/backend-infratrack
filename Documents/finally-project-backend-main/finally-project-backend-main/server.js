@@ -11,6 +11,10 @@ const JWT_SECRET = 'your_jwt_secret_key'; // **CHANGE THIS IN PRODUCTION**
 app.use(cors());
 app.use(express.json());
 
+app.use((req, res) => {
+  res.send('API is running');
+});
+
 // --- Mock User Database (Replace with a real database) ---
 // Note: In a real app, this would be a persistent database
 const users = []; // Start with an empty array for new registrations
